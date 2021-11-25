@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('http://fonts.cdnfonts.com/css/made-florence-sans');
 
 .nav-links li{
-    @apply inline-block px-20 py-0 text-xl uppercase;
-    
-
+    @apply inline-block py-0 text-xl uppercase;
 }
+
 

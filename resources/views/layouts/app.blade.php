@@ -12,42 +12,40 @@
         body{
             background-color: #212529; 
         }
+        ::selection{
+            background-color: #8A3B7E;
+        }
         .header{
             font-family: montserrat;
             background-color: #15171A; 
         }
-        
         .nav-links li{
-            transition: all 0.3s ease 0s;
-            
+            list-style: none;
         }
-        .nav-links li:hover{
-            font-weight: bold;
-        }
-
     </style>
 </head>
 <body>
     <header>
-        <div class="flex items-center justify-between w-full h-20 px-5 text-white header">
+        <div class="flex items-center justify-between w-full h-20 px-10 text-white header">
             <div>
-                <img src="{{ url("images/divinity_logo.png") }}" alt="" class="w-44">
+                <a href="{{ asset("home") }}"><img src="{{ url("images/divinity_logo.png") }}" alt="" class="w-44"></a>
+                
             </div>
             <div>
                 <ul class="nav-links">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Loja</a></li>
-                    <li><a href="#">Explorar</a></li>
-                    <li><a href="#">Ajuda</a></li>
+                    <li><a class="transition-all p-7 hover:bg-gray-800" href="">Início</a></li>
+                    <li><a class="transition-all p-7 hover:bg-gray-800" href="">Loja</a></li>
+                    <li><a class="transition-all p-7 hover:bg-gray-800" href="">Explorar</a></li>
+                    <li><a class="transition-all p-7 hover:bg-gray-800" href="">Ajuda</a></li>
                 </ul>
             </div>
             <div class="text-2xl">
-                <i class="inline-block fa fa-user" aria-hidden="true"></i>
-                <p class="inline-block">Login</p>
+                <a href="#" class="inline-block "><i class="px-1 fa fa-user" aria-hidden="true"></i>Login</a>
             </div>
         </div>
         @yield('header')
     </header>
+    
         @yield('content')
 </body>
 </html>
